@@ -2,13 +2,10 @@ class Employee extends Person {
     constructor(name, surname, clients,) {
         super(name, surname);
         this.clients = clients;
-
     }
     toString() {
         return `NAME:${super.toString()}\nNUMBER OF CLIENTS:${this.clients.length}\nTOTAL EARNINGS:${this.totalEarnings()}€\nBEST CLIENT:${this.bestClient().name} ${this.bestClient().surname}`
     }
-
-
     bestClient() {
         const clients = this.clients;
         let bestClient = clients[0];
@@ -40,5 +37,13 @@ class Employee extends Person {
     }
     removeClient(clients){
         this.clients.pop(clients);        
+    }
+    numberOfClients(){
+        let numberOfClients= 0
+        for (let i = 0; i < this.clients.length; i++) {
+            numberOfClients++;
+            
+        }
+        return numberOfClients;
     }
 }
