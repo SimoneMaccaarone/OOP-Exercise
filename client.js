@@ -10,7 +10,7 @@ class Client extends Person {
     ordersToString() {
         let str = ''
         for (let i=0; i<this.orders.length; i++) {
-            str+=this.orders[i].toString()+'\n-------------------\n';
+            str+='\n-------------------\n'+this.orders[i].toString();
         }
         return str;
     }

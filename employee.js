@@ -5,7 +5,7 @@ class Employee extends Person {
 
     }
     toString() {
-        return `NAME:${super.toString()}\nNUMBER OF CLIENTS:${this.clients.length}\nTOTAL EARNINGS:${'----------'}€\nBEST CLIENT:${this.bestClient().name} ${this.bestClient().surname}`
+        return `NAME:${super.toString()}\nNUMBER OF CLIENTS:${this.clients.length}\nTOTAL EARNINGS:${this.totalEarnings()}€\nBEST CLIENT:${this.bestClient().name} ${this.bestClient().surname}`
     }
 
 
@@ -25,10 +25,21 @@ class Employee extends Person {
         }
         return bestClient;
     }
+
+    totalEarnings() {
+        let totalEarnings = 0
+        for (let i = 0; i < this.clients.length; i++) {
+            const element=this.clients[i]
+            totalEarnings += element.totalOrdersPrice();
+        }
+        return totalEarnings;
+    }
+
 }
 
-    // totalEarning(){}
+    addClient(client){
+        this.orders.push(order);      DA FAREEEEEEEEEEE
 
-    // addClient(){}
+    }
 
     // removeClient(){}
