@@ -5,7 +5,7 @@ class Employee extends Person {
 
     }
     toString() {
-        return `NAME:${super.toString()}\nNUMBER OF CLIENTS:${this.clients.length}\nTOTAL EARNINGS:${'----------'}€\nBEST CLIENT:${this.bestClient()}`
+        return `NAME:${super.toString()}\nNUMBER OF CLIENTS:${this.clients.length}\nTOTAL EARNINGS:${'----------'}€\nBEST CLIENT:${this.bestClient().name} ${this.bestClient().surname}`
     }
 
 
