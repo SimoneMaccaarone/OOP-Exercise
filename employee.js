@@ -35,11 +35,10 @@ class Employee extends Person {
         return totalEarnings;
     }
 
-}
-
-    addClient(client){
-        this.orders.push(order);      DA FAREEEEEEEEEEE
-
+    addClient(clients){
+        this.clients.push(clients);        
     }
-
-    // removeClient(){}
+    removeClient(clients){
+        this.clients.pop(clients);        
+    }
+}

@@ -26,6 +26,9 @@ class Client extends Person {
     addOrder(order){
         this.orders.push(order);
     }
-
+    
+    removeOrder(order){
+        this.orders.pop(order)
+    }
 }
 
