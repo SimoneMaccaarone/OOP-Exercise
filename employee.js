@@ -3,9 +3,11 @@ class Employee extends Person {
         super(name, surname);
         this.clients = clients;
     }
+
     toString() {
-        return `NAME:${super.toString()}\nNUMBER OF CLIENTS:${this.clients.length}\nTOTAL EARNINGS:${this.totalEarnings()}€\nBEST CLIENT:${this.bestClient().name} ${this.bestClient().surname}`
+        return `Name: ${super.toString()}\nNumber of clients: ${this.clients.length}\nTotal earnings: ${this.totalEarnings().toFixed(2)} €\nBest client: ${this.bestClient().name} ${this.bestClient().surname}`
     }
+
     bestClient() {
         const clients = this.clients;
         let bestClient = clients[0];
@@ -26,24 +28,26 @@ class Employee extends Person {
     totalEarnings() {
         let totalEarnings = 0
         for (let i = 0; i < this.clients.length; i++) {
-            const element=this.clients[i]
+            const element = this.clients[i]
             totalEarnings += element.totalOrdersPrice();
         }
         return totalEarnings;
     }
 
-    addClient(clients){
-        this.clients.push(clients);        
+    addClient(newClients) {
+        this.clients.push(newClients);
     }
-    removeClient(clients){
-        this.clients.pop(clients);        
+
+    removeClient(newClients) {
+        this.clients.pop(newClients);
     }
-    numberOfClients(){
-        let numberOfClients= 0
+
+    numberOfClients() {
+        let numberOfClients = 0
         for (let i = 0; i < this.clients.length; i++) {
             numberOfClients++;
-            
         }
         return numberOfClients;
     }
+
 }

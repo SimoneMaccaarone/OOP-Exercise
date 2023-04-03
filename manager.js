@@ -5,7 +5,7 @@ class Manager extends Person {
     }
 
     toString() {
-        return `NAME:${super.toString()}\nNUMBER OF EMPLOYEES:${this.numberOfEmployees()}\nNUMBER OF CLIENTS:${this.totalClients()}\nTOTAL EARNINGS:${this.sumOfAllClientsforManager()}€}`
+        return `Name: ${super.toString()}\nNumber of Employees: ${this.numberOfEmployees()}\nNumber of Clients: ${this.totalClients()}\nTotal Earnings: ${this.sumOfAllClientsforManager().toFixed(2)} €}`
     }
 
     sumOfAllClientsforManager() {
@@ -37,10 +37,11 @@ class Manager extends Person {
         return totalClients;
     }
 
-    hireEmployees(employees) {
-        this.employees.push(employees);
+    hireEmployees(newEmployees) {
+        this.employees.push(newEmployees);
     }
-    fireEmployees(employees) {
-        this.employees.pop(employees);
+
+    fireEmployees(newEmployees) {
+        this.employees.pop(newEmployees);
     }
 }
