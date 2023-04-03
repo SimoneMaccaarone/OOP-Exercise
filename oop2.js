@@ -60,10 +60,5 @@ manager1.fireEmployees(employee3);/*---------------*/console.log('-_-_- Fire Emp
 
 
 
-const numbers = [3,4,5,9];
 
-function isEven(element){
-    return element % 2 === 0
-}
 
-console.log(Utility.filter(numbers, isEven))
